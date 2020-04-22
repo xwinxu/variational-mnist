@@ -13,3 +13,27 @@ Latent variable _z_ is sampled from prior distribution on _z_ usuing true parame
 
 ### Likelihood
 Likelihood of data _x_ (i.e. all 784 pixels of image) is from a conditional distribution on z using true parameters theta\*. Here the distribution is a product of independent Bernoulli's whose means are outputted by the generator network (decoder) parameterized by theta.
+
+## Visualizations
+Post training, let's explore the properties of our trained approximate posterior.
+
+#### Generative model
+Sampling latent from prior then using the decoder (generative model) to compute the bernoulli means over the pixels of image given latent z:
+![binary image sample](https://github.com/xwinxu/variational-mnist/blob/images/gen_samples.png)
+
+#### Latent Posterior
+Inferred latent posterior means from the encoder (recognition network):
+![interpolate between latent rep of two points](https://github.com/xwinxu/variational-mnist/blob/images/latent_posterior.png)
+
+#### Linear Interpolation
+Generated samples from latent representations interpolated between the posterior means of two different training examples:
+![sampled pairs 1-2, 3-8, 4-5](https://github.com/xwinxu/variational-mnist/blob/images/interpolated_means.png)
+
+#### Joint distribution
+Isocountours from joint distribution over latent z (note: 2D in this case, but can be higher for more expressivity) and trained top half of image x:
+![true and variational latent log posteriors](https://github.com/xwinxu/variational-mnist/blob/images/isocontours.png)
+
+#### Creating Frankenstein images with optimized approximate posterior
+Sample a latent z, feed into our probabilistic decoder, and infer the Bernouilli means of all bottom half of the image's pixels:
+![Predicting the bottom half of an image from the top](https://github.com/xwinxu/variational-mnist/blob/images/4be0.png)
+
