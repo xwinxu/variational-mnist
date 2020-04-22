@@ -31,9 +31,8 @@ Generated samples from latent representations interpolated between the posterior
 
 #### Joint distribution
 Isocountours from joint distribution over latent z (note: 2D in this case, but can be higher for more expressivity) and trained top half of image x:
-![true and variational latent log posteriors](https://github.com/xwinxu/variational-mnist/blob/images/isocontours.png)
+<img src="https://github.com/xwinxu/variational-mnist/blob/images/isocontours.png" alt="true and variational latent log posteriors" width="400" height="400" />
 
 #### Creating Frankenstein images with optimized approximate posterior
 Sample a latent z, feed into our probabilistic decoder, and infer the Bernouilli means of all bottom half of the image's pixels:
-![Predicting the bottom half of an image from the top](https://github.com/xwinxu/variational-mnist/blob/images/frankenstein_bottom_to_top.png =50x50)
-
+![Predicting the bottom half of an image from the top](https://github.com/xwinxu/variational-mnist/blob/images/frankenstein_bottom_to_top.png)
