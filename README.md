@@ -35,5 +35,5 @@ Isocountours from joint distribution over latent z (note: 2D in this case, but c
 
 #### Creating Frankenstein images with optimized approximate posterior
 Sample a latent z, feed into our probabilistic decoder, and infer the Bernouilli means of all bottom half of the image's pixels:
-![Predicting the bottom half of an image from the top](https://github.com/xwinxu/variational-mnist/blob/images/4be0.png)
+![Predicting the bottom half of an image from the top](https://github.com/xwinxu/variational-mnist/blob/images/frankenstein_bottom_to_top.png =50x50)
 
