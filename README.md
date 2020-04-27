@@ -6,7 +6,7 @@ An implementation of the Variational Autoencoder based on [Auto-Encoding Variati
 VAE was trained and performed inference on binarized MNIST (handwritten digits) dataset.
 
 ## Model Definition
-For an i.i.d. dataset with continuous latent variables per data point, the Variational Bayes algorithm optimizes a reconstruction network (encoder) that performs approximate posterior inference using ancestral sampling.
+For an i.i.d. dataset with continuous latent variables per data point, the Variational Bayes algorithm optimizes a recognition network (encoder) that performs approximate posterior inference using ancestral sampling.
 
 ### Prior
 Latent variable _z_ is sampled from prior distribution on _z_ usuing true parameters theta\*.
@@ -31,7 +31,7 @@ Sampling latent from prior then using the decoder (generative model) to compute 
 ![binary image sample](https://github.com/xwinxu/variational-mnist/blob/images/gen_samples.png)
 
 #### Latent Posterior
-Inferred latent posterior means from the encoder (reconstruction model):
+Inferred latent posterior means from the encoder (recognition model):
 ![interpolate between latent rep of two points](https://github.com/xwinxu/variational-mnist/blob/images/latent_posterior.png)
 
 #### Linear Interpolation
